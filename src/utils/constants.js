@@ -1,7 +1,10 @@
 export const colors = {
-    bgColor:"#ffe5ec",
+    bgColor:"#fafafa",
     bgButton:"#e5989b",
     bgHeader:"#ff8fab",
-    textColor:"#ffffff",
+    textPrimary:"#ffffff",
+    textSecondary: "#2b2d42",
+    borderColor:"#e5989b",
+
 }
 

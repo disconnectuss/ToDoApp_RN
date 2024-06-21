@@ -16,7 +16,7 @@ const styleHeader = StyleSheet.create({
   title: {
     fontWeight: 'bold',
     fontSize:25,
-    color: colors.textColor,
+    color: colors.textPrimary,
   },
 });
 
