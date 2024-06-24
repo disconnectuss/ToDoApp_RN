@@ -3,21 +3,26 @@ import Header from './src/components/header';
 import {generalStyles} from './src/utils/generalStyles';
 import InputCard from './src/components/input';
 import {useState} from 'react';
+import PlanCard from './src/components/planCard';
+
 function App() {
   const [text, setText] = useState('');
   const [plans, setPlans] = useState([]);
+  // console.log(plans.text)
   const addPlan = () => {
     const newPlan = {
       id: String(new Date().getTime()),
       text: text,
       date: new Date(),
       isDone: false,
-    }
-    setPlans([...plans, newPlan])
+    };
+    setPlans([...plans, newPlan]);
+    setText('');
+
   };
   return (
     <SafeAreaView style={generalStyles.body}>
-      <Header title={'Daily Planner'} />
+      <Header title={'Goofy Planner'} />
       <InputCard
         value={text}
         onChangeText={text => setText(text)}
@@ -32,7 +37,9 @@ function App() {
           </Text>
         ) : (
           <ScrollView>
-            <Text>new plan</Text>
+            {plans?.map(plan => (
+              <PlanCard key={plan.id} plans={plan} />
+            ))}
           </ScrollView>
         )}
       </View>

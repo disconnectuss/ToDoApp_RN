@@ -8,7 +8,7 @@ const InputCard = ({
   multiline = false,
   hasIcon = false,
   addFunc = () => {},
-  value = '',
+  value = "",
   onChangeText = () =>{},
 }) => {
 
@@ -19,6 +19,8 @@ const InputCard = ({
         placeholder={placeholder}
         keyboardType={keyboardType}
         multiline={multiline}
+        value={value}
+        onChangeText={onChangeText}
        ></TextInput>
       {hasIcon && (
         <TouchableOpacity onPress={addFunc}>
