@@ -4,6 +4,9 @@ import {generalStyles} from './src/utils/generalStyles';
 import InputCard from './src/components/input';
 import {useState} from 'react';
 import PlanCard from './src/components/planCard';
+import CalendarView from './src/components/calender';
+
+
 
 function App() {
   const [text, setText] = useState('');
@@ -22,7 +25,8 @@ function App() {
   };
   return (
     <SafeAreaView style={generalStyles.body}>
-      <Header title={'Goofy Planner'} />
+      <Header title={'Goofy Agenda'} />
+      <CalendarView/>
       <InputCard
         value={text}
         onChangeText={text => setText(text)}
@@ -30,7 +34,7 @@ function App() {
         hasIcon
         addFunc={addPlan}
       />
-      <View style={generalStyles.plansWrapper}>
+      {/* <View style={generalStyles.plansWrapper}>
         {plans.length === 0 ? (
           <Text style={generalStyles.emptyText}>
             You haven't planned anything yet!
@@ -42,7 +46,7 @@ function App() {
             ))}
           </ScrollView>
         )}
-      </View>
+      </View> */}
     </SafeAreaView>
   );
 }

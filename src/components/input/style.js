@@ -19,7 +19,7 @@ const inputStyles = StyleSheet.create({
     flex: 1,
   },
   addCircle: {
-    color: colors.bgButton,
+    color: colors.borderColor,
     borderRadius: 25,
     display: 'flex',
     justifyContent: 'center',
