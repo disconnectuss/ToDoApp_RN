@@ -1,5 +1,4 @@
 export {default as AddCircle} from './AddCircle';
+export {default as AvatarIcon} from './AvatarIcon';
 export {default as BackIcon} from './BackIcon';
-export {default as Button} from './Button';
-export {default as HeaderIcon} from './HeaderIcon';
 export {default as NoteIcon} from './NoteIcon';

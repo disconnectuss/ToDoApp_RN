@@ -13,14 +13,18 @@ const inputStyles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: colors.borderColor,
+    backgroundColor: colors.bgBox,
     padding: 20,
-    borderRadius: 5,
+    borderRadius: 50,
     fontSize: 15,
     flex: 1,
   },
+  textInput : {
+    color: colors.textSecondary
+
+  },
+
   addCircle: {
-    color: colors.borderColor,
-    borderRadius: 25,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
