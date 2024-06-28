@@ -40,7 +40,7 @@ function App() {
         ) : (
           <ScrollView>
             {plans?.map(plan => (
-              <PlanCard key={plan.id} plans={plan} />
+              <PlanCard key={plan.id} plan={plan} plans={plans} setPlans={setPlans} />
             ))}
           </ScrollView>
         )}

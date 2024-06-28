@@ -8,6 +8,7 @@ export const planStyles = StyleSheet.create({
     borderBottomWidth: 1,
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: colors.bgColor
   },
   textContainer: {
     flex: 1,
