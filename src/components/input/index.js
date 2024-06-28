@@ -13,7 +13,7 @@ const InputCard = ({
 }) => {
 
   return (
-    <View style={inputStyles.inputWrapper}>
+    <View style={inputStyles.inputContainer}>
       <TextInput
         style={inputStyles.input}
         placeholder={placeholder}

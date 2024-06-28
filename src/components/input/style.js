@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {colors} from '../../utils/constants';
 
 const inputStyles = StyleSheet.create({
-  inputWrapper: {
+  inputContainer: {
     marginVertical: 10,
     paddingHorizontal: 10,
     paddingVertical: 15,
@@ -19,11 +19,9 @@ const inputStyles = StyleSheet.create({
     fontSize: 15,
     flex: 1,
   },
-  textInput : {
-    color: colors.textSecondary
-
+  textInput: {
+    color: colors.textSecondary,
   },
-
   addCircle: {
     display: 'flex',
     justifyContent: 'center',

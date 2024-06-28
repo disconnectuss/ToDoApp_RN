@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import  styleHeader  from '../header/style'
-import { NoteIcon, BackIcon, AvatarIcon } from '../icons'
+import { BackIcon, AvatarIcon } from '../icons'
 
 const Header = ({title=""}) => {
   return (

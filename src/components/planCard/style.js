@@ -1,21 +1,29 @@
-import { StyleSheet } from "react-native";
-import { colors } from "../../utils/constants";
-
+import {StyleSheet} from 'react-native';
+import {colors} from '../../utils/constants';
 
 export const planStyles = StyleSheet.create({
-    planWrapper: {
-        padding: 20,
-        borderBottomColor:colors.borderColor,
-        borderBottomWidth:1,
-    },
-    title: {
-        fontWeight:'bold',
-        color: colors.textSecondary,
-        fontsize:25
-
-    },
-    date: {
-
-    }
-
-})
+  planContainer: {
+    padding: 20,
+    borderBottomColor: colors.borderColor,
+    borderBottomWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  textContainer: {
+    flex: 1,
+  },
+  title: {
+    fontWeight: 'bold',
+    color: colors.textPrimary,
+    fontsize: 30,
+  },
+  date: {
+    marginTop: 10,
+    color: colors.textSecondary,
+    fontsize: 25,
+  },
+  iconContainer: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+});
