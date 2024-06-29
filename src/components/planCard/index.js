@@ -33,19 +33,20 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
       }
       setPlans(temptArr);
     }
+    console.log(temptArr)
   };
   return (
     <View style={planStyles.planContainer}>
       <View style={planStyles.textContainer}>
-        <Text style={planStyles.title}>{plan?.text}</Text>
+        <Text style={[planStyles.title, plan?.isDone && planStyles.checkDone ]}>{plan?.text}</Text>
         <Text style={planStyles.date}>
           {new Date(plan?.date).toLocaleDateString('en-EN')}
         </Text>
       </View>
 
       <View style={planStyles.iconContainer}>
-        <TouchableOpacity onPress={checkDone}>
-          <Check />
+        <TouchableOpacity onPress={checkDone} >
+          <Check color={plan.isDone ? 'green' :  'gray'}/>
         </TouchableOpacity>
         <TouchableOpacity>
           <Edit />

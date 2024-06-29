@@ -27,4 +27,11 @@ export const planStyles = StyleSheet.create({
     flexDirection: 'row',
     gap: 10,
   },
+  check:{
+    color:'gray'
+  },
+  checkDone:{
+    color:'red',
+    textDecorationLine:'line-through'
+  }
 });
