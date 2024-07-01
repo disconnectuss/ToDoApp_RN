@@ -6,7 +6,7 @@ import EditModal from '../editModal';
 
 const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
   const [openModal, setOpenModal] = useState(false);
-  const [EditPlan, setEditPlan] = useState(plan.text);
+  const [editPlan, setEditPlan] = useState(plan.text);
   const deletePlan = () => {
     Alert.alert('Delete', 'Sure to delete this plan?', [
       {
@@ -60,7 +60,7 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
           <Cancel />
         </TouchableOpacity>
       </View>
-      <EditModal visible={openModal} closeModal={() => setOpenModal(false)} />
+      <EditModal visible={openModal} closeModal={() => setOpenModal(false)} editPlan={editPlan} setEditPlan={{setEditPlan}}/>
     </View>
   );
 };
