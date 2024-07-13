@@ -38,6 +38,12 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
     }
     console.log(temptArr);
   };
+  const saveEditPlan = newText => {
+    const updatedPlans = plans.map(item =>
+      item.id === plan.id ? {...plan, text: newText} : item,
+    );
+    setPlans(updatedPlans);
+  };
   return (
     <View style={planStyles.planContainer}>
       <View style={planStyles.textContainer}>
@@ -60,7 +66,13 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
           <Cancel />
         </TouchableOpacity>
       </View>
-      <EditModal visible={openModal} closeModal={() => setOpenModal(false)} editPlan={editPlan} setEditPlan={{setEditPlan}}/>
+      <EditModal
+        visible={openModal}
+        closeModal={() => setOpenModal(false)}
+        editPlan={editPlan}
+        setEditPlan={setEditPlan}
+        saveEditPlan={saveEditPlan}
+      />
     </View>
   );
 };
