@@ -7,6 +7,9 @@ import EditModal from '../editModal';
 const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
   const [openModal, setOpenModal] = useState(false);
   const [editPlan, setEditPlan] = useState(plan.text);
+  const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const deletePlan = () => {
     Alert.alert('Delete', 'Sure to delete this plan?', [
       {
@@ -22,6 +25,7 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
       },
     ]);
   };
+
   const checkDone = () => {
     const temptArr = [];
     for (let i = 0; i < plans.length; i++) {
@@ -38,12 +42,22 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
     }
     console.log(temptArr);
   };
+
   const saveEditPlan = newText => {
-    const updatedPlans = plans.map(item =>
-      item.id === plan.id ? {...plan, text: newText} : item,
-    );
-    setPlans(updatedPlans);
+    if (newText.trim() === '') {
+      setHasError(true);
+      setErrorMessage('* Do not leave empty!');
+    } else {
+      const updatedPlans = plans.map(item =>
+        item.id === plan.id ? {...plan, text: newText} : item,
+      );
+      setPlans(updatedPlans);
+      setOpenModal(false);
+      setHasError(false);
+      setErrorMessage('');
+    }
   };
+
   return (
     <View style={planStyles.planContainer}>
       <View style={planStyles.textContainer}>
@@ -72,6 +86,8 @@ const PlanCard = ({plan = {}, plans = [], setPlans = () => {}}) => {
         editPlan={editPlan}
         setEditPlan={setEditPlan}
         saveEditPlan={saveEditPlan}
+        hasError={hasError}
+        errorMessage={errorMessage}
       />
     </View>
   );

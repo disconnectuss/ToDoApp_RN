@@ -9,10 +9,11 @@ const EditModal = ({
   editPlan,
   setEditPlan,
   saveEditPlan,
+  hasError,
+  errorMessage,
 }) => {
   const handleSave = () => {
     saveEditPlan(editPlan);
-    closeModal();
   };
   return (
     <Modal visible={visible} transparent>
@@ -25,6 +26,9 @@ const EditModal = ({
             editPlan={editPlan}
             setEditPlan={setEditPlan}
           />
+          {hasError && (
+            <Text style={modalStyles.validationText}>{errorMessage}</Text>
+          )}
           <TouchableOpacity onPress={handleSave}>
             <Text style={modalStyles.text}>Save</Text>
           </TouchableOpacity>

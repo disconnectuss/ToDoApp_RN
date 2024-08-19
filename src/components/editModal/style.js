@@ -6,7 +6,7 @@ export const modalStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.bgModal,
+    backgroundColor: colors.bgModal
   },
   modalContent: {
     width: '80%',
@@ -26,4 +26,9 @@ export const modalStyles = StyleSheet.create({
     color: 'blue',
     fontSize: 18,
   },
+  validationText:{
+    color: 'red',
+    fontSize: 15,
+    margin:5,
+  }
 });
