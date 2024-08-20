@@ -6,7 +6,7 @@ export const generalStyles = StyleSheet.create({
     backgroundColor: colors.bgColor
   },
   plansWrapper: {
-    flex: 1,
+    flex: 2,
     borderWidth:1,
     marginHorizontal: 20,
     marginVertical: 10,

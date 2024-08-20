@@ -3359,6 +3359,7 @@ __metadata:
     react-native: 0.74.1
     react-native-calendars: ^1.1305.0
     react-native-svg: ^15.3.0
+    react-native-switch-selector: ^2.3.0
     react-test-renderer: 18.2.0
     typescript: 5.0.4
   languageName: unknown
@@ -8296,7 +8297,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.8.1, prop-types@npm:^15.5.10, prop-types@npm:^15.8.1":
+"prop-types@npm:15.8.1, prop-types@npm:^15.5.10, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8419,6 +8420,15 @@ __metadata:
   version: 1.0.5
   resolution: "react-native-swipe-gestures@npm:1.0.5"
   checksum: d637bc40baa50fa0ce3b6cf2b494efeceaea03cc3875cb7cf7d76922914a21d5e6b098d4a084fb291ce61bfbb0a241c03cff24b15bebf0cfae1c146f4ad10d92
+  languageName: node
+  linkType: hard
+
+"react-native-switch-selector@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "react-native-switch-selector@npm:2.3.0"
+  dependencies:
+    prop-types: ^15.7.2
+  checksum: 1b0447c84e2707a255f7143e4d8627efba7b842a9a5227c01b383778bcf90ecdace11289a6f27921cf236b0a83f766ca3ce68a964057ba8dbeb161bdfe649317
   languageName: node
   linkType: hard
 
