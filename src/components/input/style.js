@@ -15,7 +15,7 @@ const inputStyles = StyleSheet.create({
     borderColor: colors.borderColor,
     backgroundColor: colors.bgBox,
     padding: 20,
-    borderRadius: 50,
+    borderRadius: 10,
     fontSize: 15,
     flex: 1,
   },

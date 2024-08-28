@@ -7,5 +7,6 @@ export const colors = {
   textThird: "#171213",
   borderColor: "#E0E0E0",
   bgBox: "#D6D6D6",
-  bgModal: "#0000004D" // transparent
+  bgModal: "#0000004D", // transparent
+  white:"#ffffff"
 };
